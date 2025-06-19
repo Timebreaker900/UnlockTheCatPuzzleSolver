@@ -1,11 +1,13 @@
-﻿
+﻿using UnlockTheCatPuzzleSolver.Classes;
+using UnlockTheCatPuzzleSolver.Levels.L1_SummerSun;
+using UnlockTheCatPuzzleSolver.Levels.L2_MidnightSky;
 
-using UnlockTheCatPuzzleSolver.Classes;
-using UnlockTheCatPuzzleSolver.Levels;
+namespace UnlockTheCatPuzzleSolver;
 
-class Program {
+internal static class Program {
     static readonly Dictionary<int, Func<Level>> LevelFactories = new Dictionary<int, Func<Level>>
     {
+        // SummerSun
         [1] = () => new Level1(),
         [2] = () => new Level2(),
         [3] = () => new Level3(),
@@ -19,6 +21,9 @@ class Program {
         [11] = () => new Level11(),
         [12] = () => new Level12(),
         [13] = () => new Level13(),
+        // MidnightSky
+        [14] = () => new Level14(),
+        [15] = () => new Level15(),
     };
     
     static void PrintGrid(List<Block> blocks, int size)

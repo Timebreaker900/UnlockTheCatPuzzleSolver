@@ -1,6 +1,6 @@
 ﻿using UnlockTheCatPuzzleSolver.Classes;
 
-namespace UnlockTheCatPuzzleSolver.Levels;
+namespace UnlockTheCatPuzzleSolver.Levels.L1_SummerSun;
 
 public class Level8 : Level
 {

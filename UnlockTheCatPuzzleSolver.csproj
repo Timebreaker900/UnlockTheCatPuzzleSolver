@@ -7,4 +7,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Levels\L3_Desert\" />
+      <Folder Include="Levels\L4_LongWinter\" />
+    </ItemGroup>
+
 </Project>
