@@ -2,13 +2,14 @@
 
 namespace UnlockTheCatPuzzleSolver.Levels;
 
-public class Level1 : Level
+public class Level2 : Level
 {
     public override List<Block> Blocks { get; } = new List<Block>
     {
         // Cat
         new Block(0, 2, 1, 2, true), 
         // Blocks
-        new Block(1, 1, 5, 3, false)
+        new Block(1, 1, 3, 3, false),
+        new Block(2, 4, 3, 2, true),
     };
 }

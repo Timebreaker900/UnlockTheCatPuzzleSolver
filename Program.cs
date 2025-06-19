@@ -7,7 +7,7 @@ class Program {
     static readonly Dictionary<int, Func<Level>> LevelFactories = new Dictionary<int, Func<Level>>
     {
         [1] = () => new Level1(),
-        //[2] = () => new Level2(),
+        [2] = () => new Level2(),
     };
     
     static void PrintGrid(List<Block> blocks, int size)
