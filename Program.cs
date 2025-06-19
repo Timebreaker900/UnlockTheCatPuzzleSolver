@@ -69,7 +69,7 @@ class Program {
     {
         Console.WriteLine($"Welcome to the Unlock The Cat Puzzle Solver!");
         
-        Console.WriteLine($"Please enter the Level you want to solce (1-{LevelFactories.Count}):");
+        Console.WriteLine($"Please enter the Level you want to solve (1-{LevelFactories.Count}):");
         if (!int.TryParse(Console.ReadLine(), out int lvl) || !LevelFactories.ContainsKey(lvl))
         {
             Console.WriteLine("Level not Found!");
