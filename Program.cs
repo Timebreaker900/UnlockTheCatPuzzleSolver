@@ -1,11 +1,12 @@
 ﻿using UnlockTheCatPuzzleSolver.Classes;
 using UnlockTheCatPuzzleSolver.Levels.L1_SummerSun;
 using UnlockTheCatPuzzleSolver.Levels.L2_MidnightSky;
+using UnlockTheCatPuzzleSolver.Levels.L4_LongWinter;
 
 namespace UnlockTheCatPuzzleSolver;
 
 internal static class Program {
-    static readonly Dictionary<int, Func<Level>> LevelFactories = new Dictionary<int, Func<Level>>
+    static readonly Dictionary<int, Func<Level?>> LevelFactories = new Dictionary<int, Func<Level?>>
     {
         // SummerSun
         [1] = () => new Level1(),
@@ -24,6 +25,26 @@ internal static class Program {
         // MidnightSky
         [14] = () => new Level14(),
         [15] = () => new Level15(),
+        [16] = () => null, // Coming soon
+        [17] = () => null, // Coming soon
+        [18] = () => null, // Coming soon
+        [19] = () => null, // Coming soon
+        [20] = () => null, // Coming soon
+        [21] = () => null, // Coming soon
+        [22] = () => null, // Coming soon
+        // Desert
+        [23] = () => null, // Coming soon
+        [24] = () => null, // Coming soon
+        [25] = () => null, // Coming soon
+        [26] = () => null, // Coming soon
+        [27] = () => null, // Coming soon
+        [28] = () => null, // Coming soon
+        [29] = () => null, // Coming soon
+        [30] = () => null, // Coming soon
+        [31] = () => null, // Coming soon
+        // LongWinter
+        [32] = () => new Level32(),
+        [33] = () => new Level33(),
     };
     
     static void PrintGrid(List<Block> blocks, int size)
@@ -84,7 +105,13 @@ internal static class Program {
             return;
         }
         
-        Level level = LevelFactories[lvl]();
+        Level? level = LevelFactories[lvl]();
+        
+        if (level == null)
+        {
+            Console.WriteLine($"Level {lvl} is coming soon – bitte wähle ein anderes Level.");
+            return;
+        }
         
         int size = 6;
         var blocks = level.Blocks;
@@ -92,10 +119,10 @@ internal static class Program {
         int exitRow = 2, exitCol = 5; // Ausgang rechts von Zeile3 Spalte6
 
         
-        var solution = Solver.Solve(start, size, exitRow, exitCol);
-        
         Console.WriteLine("Startlocation:");
         PrintGrid(blocks, size);
+        
+        var solution = Solver.Solve(start, size, exitRow, exitCol);
 
         int step = 1;
         foreach (var (id, dr, dc) in solution)
