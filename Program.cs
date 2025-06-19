@@ -50,6 +50,8 @@ internal static class Program {
         [36] = () => new Level36(),
         [37] = () => new Level37(),
         [38] = () => new Level38(),
+        [39] = () => new Level39(),
+        [40] = () => new Level40(),
     };
     
     static void PrintGrid(List<Block> blocks, int size)
