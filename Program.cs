@@ -45,6 +45,11 @@ internal static class Program {
         // LongWinter
         [32] = () => new Level32(),
         [33] = () => new Level33(),
+        [34] = () => new Level34(),
+        [35] = () => new Level35(),
+        [36] = () => new Level36(),
+        [37] = () => new Level37(),
+        [38] = () => new Level38(),
     };
     
     static void PrintGrid(List<Block> blocks, int size)
