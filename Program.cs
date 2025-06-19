@@ -16,6 +16,9 @@ class Program {
         [8] = () => new Level8(),
         [9] = () => new Level9(),
         [10] = () => new Level10(),
+        [11] = () => new Level11(),
+        [12] = () => new Level12(),
+        [13] = () => new Level13(),
     };
     
     static void PrintGrid(List<Block> blocks, int size)
